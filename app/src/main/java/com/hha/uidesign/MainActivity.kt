@@ -1,7 +1,10 @@
 package com.hha.uidesign
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.annotation.RequiresApi
 import com.hha.uidesign.databinding.ActivityMainBinding
 import org.imaginativeworld.whynotimagecarousel.CarouselItem
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
@@ -11,6 +14,7 @@ class MainActivity : AppCompatActivity()
 
     private lateinit var binding : ActivityMainBinding
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState : Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -35,6 +39,22 @@ class MainActivity : AppCompatActivity()
         // ...
 
         binding.imageCarousel.addData(list)
+
+        binding.apply {
+            btnByRoom.setOnClickListener {
+                byRatesLayout.visibility = View.GONE
+                byRoomLayout.visibility = View.VISIBLE
+                btnByRoom.setBackgroundColor(getColor(R.color.darkgrey))
+                btnByRates.setBackgroundColor(getColor(R.color.white))
+            }
+
+            btnByRates.setOnClickListener {
+                byRatesLayout.visibility = View.VISIBLE
+                byRoomLayout.visibility = View.GONE
+                btnByRoom.setBackgroundColor(getColor(R.color.white))
+                btnByRates.setBackgroundColor(getColor(R.color.darkgrey))
+            }
+        }
 
     }
 }

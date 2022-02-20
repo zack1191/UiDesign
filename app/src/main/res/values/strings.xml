@@ -2,4 +2,6 @@
     <string name = "app_name">UiDesign</string>
     <string name = "furama_riverfront_singapore">Furama Riverfront, \nSingapore</string>
     <string name = "f_b"><![CDATA[F&B]]></string>
+    <string name = "inclusive_of_breakfast">Inclusive of \nBreakfast</string>
+    <string name = "_20_off_in_room_service">20% off \nIn-Room Service</string>
 </resources>

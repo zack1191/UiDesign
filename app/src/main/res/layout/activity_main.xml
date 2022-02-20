@@ -226,7 +226,7 @@
             app:layout_constraintTop_toBottomOf = "@+id/linearLayout">
 
             <LinearLayout
-                android:id = "@+id/llLogIn"
+                android:id = "@+id/btnByRoom"
                 android:layout_width = "0dp"
                 android:layout_height = "wrap_content"
                 android:layout_weight = "1"
@@ -248,7 +248,7 @@
             </LinearLayout>
 
             <TextView
-                android:id = "@+id/tvSignUp"
+                android:id = "@+id/btnByRates"
                 android:layout_width = "0dp"
                 android:layout_height = "wrap_content"
                 android:layout_weight = "1"
@@ -262,102 +262,304 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id = "@+id/imageView5"
-            android:layout_width = "0dp"
-            android:layout_height = "140dp"
-            android:layout_marginStart = "16dp"
-            android:layout_marginTop = "16dp"
-            android:layout_marginEnd = "16dp"
-            android:scaleType = "fitXY"
-            android:src = "@drawable/iv_byrate"
-            app:layout_constraintEnd_toEndOf = "parent"
-            app:layout_constraintStart_toStartOf = "parent"
-            app:layout_constraintTop_toBottomOf = "@+id/layout1"/>
-
-        <TextView
-            android:id = "@+id/textView4"
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:layout_marginStart = "16dp"
-            android:layout_marginTop = "16dp"
-            android:text = "Delux Twin"
-            android:textColor = "@color/black"
-            android:textSize = "@dimen/text_regular_2x"
-            android:textStyle = "bold"
-            app:layout_constraintStart_toStartOf = "parent"
-            app:layout_constraintTop_toBottomOf = "@+id/imageView5"/>
-
-        <TextView
-            android:id = "@+id/textView5"
-            android:layout_width = "0dp"
-            android:layout_height = "wrap_content"
-            android:layout_marginStart = "16dp"
-            android:text = "Twin Single Beds,Cable TV ,Free Wifi..."
-            app:layout_constraintStart_toStartOf = "parent"
-            app:layout_constraintTop_toBottomOf = "@+id/textView4"/>
-
-        <TextView
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:layout_marginEnd = "16dp"
-            android:background = "@drawable/background"
-            android:padding = "10dp"
-            android:text = "View Rates"
-            android:textColor = "@color/orange"
-            app:layout_constraintBottom_toBottomOf = "@+id/textView5"
-            app:layout_constraintEnd_toEndOf = "parent"
-            app:layout_constraintTop_toTopOf = "@+id/textView4"/>
-
-        <TextView
-            android:id = "@+id/textView6"
-            android:layout_width = "0dp"
-            android:layout_height = "wrap_content"
-            android:layout_marginStart = "16dp"
-            android:layout_marginTop = "16dp"
-            android:text = "Avg.Nightly/Room From"
-            android:textColor = "#111111"
-            android:textStyle = "bold"
-            app:layout_constraintEnd_toStartOf = "@+id/textView8"
-            app:layout_constraintStart_toStartOf = "parent"
-            app:layout_constraintTop_toBottomOf = "@+id/textView5"/>
-
-        <TextView
-            android:id = "@+id/textView8"
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:layout_marginEnd = "8dp"
-            android:text = "SGD"
-            android:textColor = "#111111"
-            android:textSize = "@dimen/text_small"
-            android:textStyle = "bold"
-            app:layout_constraintBottom_toBottomOf = "@+id/textView6"
-            app:layout_constraintEnd_toStartOf = "@+id/textView7"/>
-
-        <TextView
-            android:id = "@+id/textView7"
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:layout_marginEnd = "16dp"
-
-            android:text = "161.42"
-            android:textColor = "#111111"
-            android:textSize = "@dimen/text_regular_3x"
-            android:textStyle = "bold"
-            app:layout_constraintBottom_toBottomOf = "@+id/textView6"
-            app:layout_constraintEnd_toEndOf = "parent"
-            app:layout_constraintTop_toTopOf = "@+id/textView6"/>
-
-        <View
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/byRoomLayout"
             android:layout_width = "match_parent"
-            android:layout_height = "2dp"
-            android:layout_marginStart = "16dp"
-            android:layout_marginTop = "16dp"
-            android:layout_marginEnd = "16dp"
-            android:background = "@color/black"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "8dp"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
-            app:layout_constraintTop_toBottomOf = "@+id/textView6"/>
+            app:layout_constraintTop_toBottomOf = "@+id/layout1">
+
+            <ImageView
+                android:id = "@+id/imageView5"
+                android:layout_width = "0dp"
+                android:layout_height = "140dp"
+                android:layout_marginStart = "16dp"
+                android:layout_marginTop = "8dp"
+                android:layout_marginEnd = "16dp"
+                android:scaleType = "fitXY"
+                android:src = "@drawable/iv_byrate"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"/>
+
+            <TextView
+                android:id = "@+id/textView4"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "16dp"
+                android:layout_marginTop = "16dp"
+                android:text = "Delux Twin"
+                android:textColor = "@color/black"
+                android:textSize = "@dimen/text_regular_2x"
+                android:textStyle = "bold"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/imageView5"/>
+
+            <TextView
+                android:id = "@+id/textView5"
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "16dp"
+                android:text = "Twin Single Beds,Cable TV ,Free Wifi..."
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/textView4"/>
+
+            <TextView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginEnd = "16dp"
+                android:background = "@drawable/background"
+                android:padding = "10dp"
+                android:text = "View Rates"
+                android:textColor = "@color/orange"
+                app:layout_constraintBottom_toBottomOf = "@+id/textView5"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintTop_toTopOf = "@+id/textView4"/>
+
+            <TextView
+                android:id = "@+id/textView60"
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "16dp"
+                android:layout_marginTop = "16dp"
+                android:text = "Avg.Nightly/Room From"
+                android:textColor = "#111111"
+                android:textStyle = "bold"
+                app:layout_constraintEnd_toStartOf = "@+id/textView8"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/textView5"/>
+
+            <TextView
+                android:id = "@+id/textView8"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginEnd = "8dp"
+                android:text = "SGD"
+                android:textColor = "#111111"
+                android:textSize = "@dimen/text_small"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "@+id/textView60"
+                app:layout_constraintEnd_toStartOf = "@+id/textView7"/>
+
+            <TextView
+                android:id = "@+id/textView7"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginEnd = "16dp"
+
+                android:text = "161.42"
+                android:textColor = "#111111"
+                android:textSize = "@dimen/text_regular_3x"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "@+id/textView60"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintTop_toTopOf = "@+id/textView60"/>
+
+            <View
+                android:layout_width = "match_parent"
+                android:layout_height = "2dp"
+                android:layout_marginStart = "16dp"
+                android:layout_marginTop = "16dp"
+                android:layout_marginEnd = "16dp"
+                android:background = "@color/black"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/textView60"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/byRatesLayout"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "8dp"
+            android:layout_marginEnd = "16dp"
+            android:background = "@drawable/dot_background"
+            android:visibility = "gone"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/layout1">
+
+            <TextView
+                android:id = "@+id/textView9"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "8dp"
+                android:layout_marginTop = "8dp"
+                android:text = "YOUR E-VOUCHER RATE"
+                android:textColor = "#111111"
+                android:textStyle = "bold"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"/>
+
+            <TextView
+                android:id = "@+id/textView3"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "8dp"
+                android:text = "Mobile App Special Voucher"
+                android:textColor = "@color/black"
+                android:textSize = "@dimen/text_regular_2x"
+                android:textStyle = "bold"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/textView9"/>
+
+            <ImageView
+                android:layout_width = "30dp"
+                android:layout_height = "30dp"
+                android:layout_marginEnd = "8dp"
+                android:src = "@drawable/nextred"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintTop_toTopOf = "@+id/textView9"/>
+
+            <LinearLayout
+                android:id = "@+id/linearLayout2"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "8dp"
+                android:layout_marginTop = "8dp"
+                android:layout_marginEnd = "8dp"
+                android:orientation = "horizontal"
+                android:weightSum = "3"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/textView3">
+
+                <LinearLayout
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_weight = "1"
+                    android:gravity = "center"
+
+                    android:orientation = "vertical">
+
+                    <ImageView
+                        android:layout_width = "40dp"
+                        android:layout_height = "40dp"
+                        android:src = "@drawable/fnb"/>
+
+                    <TextView
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:gravity = "center"
+                        android:text = "@string/inclusive_of_breakfast"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_weight = "1"
+                    android:gravity = "center"
+
+                    android:orientation = "vertical">
+
+                    <ImageView
+                        android:layout_width = "40dp"
+                        android:layout_height = "40dp"
+                        android:src = "@drawable/discount"/>
+
+                    <TextView
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:gravity = "center"
+                        android:text = "@string/_20_off_in_room_service"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_gravity = "center"
+                    android:layout_weight = "1"
+                    android:background = "@drawable/background"
+                    android:gravity = "center"
+                    android:padding = "10dp"
+                    android:text = "View Rates"
+                    android:textColor = "@color/orange"
+                    app:layout_constraintBottom_toBottomOf = "@+id/textView5"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintTop_toTopOf = "@+id/textView4"/>
+            </LinearLayout>
+
+            <View
+                android:id = "@+id/view"
+                android:layout_width = "match_parent"
+                android:layout_height = "2dp"
+                android:layout_marginStart = "8dp"
+                android:layout_marginTop = "8dp"
+                android:layout_marginEnd = "8dp"
+                android:background = "@color/black"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/linearLayout2"/>
+
+            <TextView
+                android:id = "@+id/textView6"
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "8dp"
+                android:layout_marginTop = "8dp"
+                android:text = "Avg.Nightly/Room From"
+                android:textColor = "#111111"
+                android:textStyle = "bold"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/view"/>
+
+            <TextView
+                android:id = "@+id/textView11"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginEnd = "8dp"
+                android:text = "SGD"
+                android:textColor = "#111111"
+                android:textSize = "@dimen/text_small"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "@+id/textView6"
+                app:layout_constraintEnd_toStartOf = "@+id/textView10"/>
+
+            <TextView
+                android:id = "@+id/textView10"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+
+                android:layout_marginEnd = "8dp"
+                android:text = "161.42"
+                android:textColor = "#111111"
+                android:textSize = "@dimen/text_regular_3x"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "@+id/textView6"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintTop_toTopOf = "@+id/textView6"/>
+
+            <TextView
+                android:id = "@+id/textView12"
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "8dp"
+                android:text = "Subject to GST &amp; Service charge"
+                android:textStyle = "bold"
+                app:layout_constraintEnd_toStartOf = "@+id/textView11"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/textView6"/>
+
+            <TextView
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "16dp"
+                android:background = "#FFDB58"
+                android:gravity = "center"
+                android:padding = "6dp"
+                android:text = "MEMBERS DEALS"
+                android:textColor = "#111111"
+                android:textSize = "@dimen/text_regular_2x"
+                android:textStyle = "bold"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/textView12"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
