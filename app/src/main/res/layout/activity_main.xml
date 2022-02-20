@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:fillViewport = "true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        tools:context = ".MainActivity">
+
+        <ImageView
+            android:id = "@+id/imageView"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "8dp"
+            android:layout_marginTop = "8dp"
+            android:src = "@drawable/ic_baseline_keyboard_backspace_24"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"/>
+
+        <ImageView
+            android:id = "@+id/imageView2"
+            android:layout_width = "30dp"
+            android:layout_height = "30dp"
+            android:layout_marginTop = "8dp"
+            android:layout_marginEnd = "8dp"
+            android:src = "@drawable/currency"
+            app:layout_constraintEnd_toStartOf = "@+id/imageView3"
+            app:layout_constraintTop_toTopOf = "parent"/>
+
+        <ImageView
+            android:id = "@+id/imageView3"
+            android:layout_width = "30dp"
+            android:layout_height = "30dp"
+            android:layout_marginTop = "8dp"
+            android:layout_marginEnd = "16dp"
+            android:src = "@drawable/chatactive"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"/>
+
+        <TextView
+            android:id = "@+id/textView"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "16dp"
+            android:text = "@string/furama_riverfront_singapore"
+            android:textColor = "@color/black"
+            android:textSize = "@dimen/text_regular_3x"
+            android:textStyle = "bold"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/imageView2"/>
+
+        <ImageView
+            android:layout_width = "30dp"
+            android:layout_height = "30dp"
+            android:layout_marginEnd = "16dp"
+            android:src = "@drawable/nextred"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "@+id/textView"/>
+
+        <TextView
+            android:id = "@+id/textView2"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "8dp"
+            android:text = "405 Havelock Road,Singapore 169633"
+            android:textStyle = "bold"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/textView"/>
+
+        <ImageView
+            android:id = "@+id/imageView4"
+            android:layout_width = "30dp"
+            android:layout_height = "30dp"
+            android:layout_marginEnd = "16dp"
+            android:src = "@drawable/currentlocation"
+            app:layout_constraintBottom_toBottomOf = "@+id/textView2"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "@+id/textView2"/>
+
+        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+            android:id = "@+id/imageCarousel"
+            android:layout_width = "match_parent"
+            android:layout_height = "140dp"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "8dp"
+            android:layout_marginEnd = "16dp"
+            app:autoPlay = "true"
+            app:autoWidthFixing = "true"
+            app:carouselType = "SHOWCASE"
+            app:itemLayout = "@layout/item_carousel"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/imageView4"
+            app:scaleOnScroll = "true"
+            app:scalingFactor = "2"
+            app:showCaption = "false"
+            app:showNavigationButtons = "false"
+            app:showTopShadow = "true"/>
+
+        <LinearLayout
+            android:id = "@+id/linearLayout"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "8dp"
+            android:layout_marginEnd = "16dp"
+            android:orientation = "horizontal"
+            android:weightSum = "5"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/imageCarousel">
+
+            <LinearLayout
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:gravity = "center"
+
+                android:orientation = "vertical">
+
+                <ImageView
+                    android:layout_width = "40dp"
+                    android:layout_height = "40dp"
+                    android:src = "@drawable/theme"/>
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "Amenities"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+
+                android:gravity = "center"
+                android:orientation = "vertical">
+
+                <ImageView
+                    android:layout_width = "40dp"
+                    android:layout_height = "40dp"
+                    android:src = "@drawable/workout"/>
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "Facilities"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+
+                android:gravity = "center"
+                android:orientation = "vertical">
+
+                <ImageView
+                    android:layout_width = "40dp"
+                    android:layout_height = "40dp"
+                    android:src = "@drawable/fnb"/>
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "@string/f_b"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+
+                android:gravity = "center"
+                android:orientation = "vertical">
+
+                <ImageView
+                    android:layout_width = "40dp"
+                    android:layout_height = "40dp"
+                    android:src = "@drawable/kidsfamily"/>
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "Kids/Family"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:gravity = "center"
+                android:orientation = "vertical">
+
+                <ImageView
+                    android:layout_width = "40dp"
+                    android:layout_height = "40dp"
+                    android:src = "@drawable/wellness"/>
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "Wellness"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id = "@+id/layout1"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "8dp"
+            android:layout_marginEnd = "16dp"
+            android:background = "@drawable/background_blue"
+            android:weightSum = "2"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/linearLayout">
+
+            <LinearLayout
+                android:id = "@+id/llLogIn"
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:background = "@color/darkgrey"
+                android:orientation = "vertical"
+                android:padding = "10dp"
+                android:textSize = "@dimen/text_regular_2x">
+
+                <TextView
+                    android:id = "@+id/tv_heading"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_gravity = "center"
+                    android:text = "By Room"
+                    android:textColor = "@color/black"
+                    android:textSize = "@dimen/text_regular_2x"
+                    android:textStyle = "bold"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id = "@+id/tvSignUp"
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_weight = "1"
+                android:background = "@color/white"
+                android:gravity = "center"
+                android:padding = "10dp"
+                android:text = "By Rates"
+                android:textColor = "@color/black"
+                android:textSize = "@dimen/text_regular_2x"
+                android:textStyle = "bold"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id = "@+id/imageView5"
+            android:layout_width = "0dp"
+            android:layout_height = "140dp"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "16dp"
+            android:layout_marginEnd = "16dp"
+            android:scaleType = "fitXY"
+            android:src = "@drawable/iv_byrate"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/layout1"/>
+
+        <TextView
+            android:id = "@+id/textView4"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "16dp"
+            android:text = "Delux Twin"
+            android:textColor = "@color/black"
+            android:textSize = "@dimen/text_regular_2x"
+            android:textStyle = "bold"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/imageView5"/>
+
+        <TextView
+            android:id = "@+id/textView5"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "16dp"
+            android:text = "Twin Single Beds,Cable TV ,Free Wifi..."
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/textView4"/>
+
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginEnd = "16dp"
+            android:background = "@drawable/background"
+            android:padding = "10dp"
+            android:text = "View Rates"
+            android:textColor = "@color/orange"
+            app:layout_constraintBottom_toBottomOf = "@+id/textView5"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "@+id/textView4"/>
+
+        <TextView
+            android:id = "@+id/textView6"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "16dp"
+            android:text = "Avg.Nightly/Room From"
+            android:textColor = "#111111"
+            android:textStyle = "bold"
+            app:layout_constraintEnd_toStartOf = "@+id/textView8"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/textView5"/>
+
+        <TextView
+            android:id = "@+id/textView8"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginEnd = "8dp"
+            android:text = "SGD"
+            android:textColor = "#111111"
+            android:textSize = "@dimen/text_small"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "@+id/textView6"
+            app:layout_constraintEnd_toStartOf = "@+id/textView7"/>
+
+        <TextView
+            android:id = "@+id/textView7"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginEnd = "16dp"
+
+            android:text = "161.42"
+            android:textColor = "#111111"
+            android:textSize = "@dimen/text_regular_3x"
+            android:textStyle = "bold"
+            app:layout_constraintBottom_toBottomOf = "@+id/textView6"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "@+id/textView6"/>
+
+        <View
+            android:layout_width = "match_parent"
+            android:layout_height = "2dp"
+            android:layout_marginStart = "16dp"
+            android:layout_marginTop = "16dp"
+            android:layout_marginEnd = "16dp"
+            android:background = "@color/black"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/textView6"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
